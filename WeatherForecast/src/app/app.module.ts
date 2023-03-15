@@ -9,6 +9,7 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { HourlyWeatherComponent } from './hourly-weather/hourly-weather.component';
 import { WeatherPredictionComponent } from './weather-prediction/weather-prediction.component';
 import { HoverDirective } from './hover.directive';
+import { SubstringPipe } from './substring.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HoverDirective } from './hover.directive';
     HourlyWeatherComponent,
     WeatherPredictionComponent,
     HoverDirective,
+    SubstringPipe,
   ],
   imports: [
     BrowserModule,

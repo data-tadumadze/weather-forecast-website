@@ -4,3 +4,7 @@
 <ul>
     <li *ngFor="let city of cities"> {{city}} </li>
 </ul>
+<p>
+    "{{ 'abcdefghijklmnopqrstuvwxyz' | uppercase | substring: 0:12 }}"
+</p>
+<div *ngFor="let item of obj | keyvalue">{{ item.key }}: {{ item.value }}</div>
