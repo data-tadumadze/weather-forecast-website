@@ -1,1 +1,6 @@
 <p>weather-prediction works!</p>
+<p appHover>Hover over me to change background color</p>
+<p *ngIf="cloudy">This is visible, when weather is cloudy</p>
+<ul>
+    <li *ngFor="let city of cities"> {{city}} </li>
+</ul>

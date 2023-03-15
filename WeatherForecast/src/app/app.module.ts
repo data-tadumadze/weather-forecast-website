@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { HourlyWeatherComponent } from './hourly-weather/hourly-weather.component';
 import { WeatherPredictionComponent } from './weather-prediction/weather-prediction.component';
+import { HoverDirective } from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WeatherPredictionComponent } from './weather-prediction/weather-predict
     HeaderComponent,
     CurrentWeatherComponent,
     HourlyWeatherComponent,
-    WeatherPredictionComponent
+    WeatherPredictionComponent,
+    HoverDirective,
   ],
   imports: [
     BrowserModule,
