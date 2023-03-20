@@ -7,7 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class WeatherPredictionComponent {
   cloudy = true;
-  cities = ['Tbilisi', 'Batumi', 'Zugdidi'];
-  @Input() obj: any;
+  @Input() cities = [""];
 }
-

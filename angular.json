@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WeatherForecast": {
+    "weather-website": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,13 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/weather-forecast",
+            "outputPath": "dist/weather-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "WeatherForecast:build:production"
+              "browserTarget": "weather-website:build:production"
             },
             "development": {
-              "browserTarget": "WeatherForecast:build:development"
+              "browserTarget": "weather-website:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WeatherForecast:build"
+            "browserTarget": "weather-website:build"
           }
         },
         "test": {
@@ -96,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "8d2b15aa-9ff8-4781-9569-0253712c26e2"
+    "analytics": "09d797a5-e3e8-46e8-86c9-28a61a2d1a0c"
   }
 }

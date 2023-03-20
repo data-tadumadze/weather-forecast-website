@@ -14,5 +14,3 @@ export class HoverDirective {
     this.el.nativeElement.style.cursor = 'pointer';
   }
 }
-
-

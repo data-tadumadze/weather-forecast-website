@@ -1,10 +1,10 @@
 <p>weather-prediction works!</p>
 <p appHover>Hover over me to change background color</p>
-<p *ngIf="cloudy">This is visible, when weather is cloudy</p>
+
+<div *ngIf="cloudy">This is visible, when weather is cloudy</div>
 <ul>
     <li *ngFor="let city of cities"> {{city}} </li>
 </ul>
 <p>
     "{{ 'abcdefghijklmnopqrstuvwxyz' | uppercase | substring: 0:12 }}"
 </p>
-<div *ngFor="let item of obj | keyvalue">{{ item.key }}: {{ item.value }}</div>
