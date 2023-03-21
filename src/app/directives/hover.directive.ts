@@ -10,7 +10,7 @@ export class HoverDirective {
     this.el.nativeElement.style.backgroundColor = 'red';
   }
   @HostListener('mouseleave') onMouseLeave() {
-    this.el.nativeElement.style.backgroundColor = 'white';
+    this.el.nativeElement.style.backgroundColor = null;
     this.el.nativeElement.style.cursor = 'pointer';
   }
 }

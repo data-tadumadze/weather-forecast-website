@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
+import { CurrentWeather } from '../interfaces/current-weather.model';
 
 @Injectable({
   providedIn: 'root',
 })
-
-//Update
 export class VirtualStorage {
   public items: CurrentWeather[] = [
     {

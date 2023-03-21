@@ -1,5 +1,10 @@
-<app-header class="bg-red-100">Hi</app-header>
-<app-hourly-weather></app-hourly-weather>
-<app-navbar></app-navbar>
-<app-weather-prediction [cities]="cities"></app-weather-prediction>
-<app-current-weather></app-current-weather>
+<div class="flex justify-between">
+    <app-navbar></app-navbar>
+    <div class="flex flex-col justify-around">
+        <app-header></app-header>
+        <app-hourly-weather></app-hourly-weather>
+        <app-current-weather></app-current-weather>
+    </div>
+    <app-weather-prediction></app-weather-prediction>
+</div>
+

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { weekDays } from '../enums/weekdays.enum';
+import { weatherTermEnum } from '../enums/weather-term.enum';
 
 @Component({
   selector: 'app-weather-prediction',
@@ -7,5 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class WeatherPredictionComponent {
   cloudy = true;
-  @Input() cities = [""];
+  @Input() cities = [''];
+  public weekDays = weekDays;
+  public weatherTermEnum = weatherTermEnum;
 }

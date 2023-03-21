@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VirtualStorage } from '../services/virtual-storage.service';
+
 @Component({
   selector: 'app-current-weather',
   templateUrl: './current-weather.component.html',
