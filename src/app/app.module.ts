@@ -11,6 +11,7 @@ import { WeatherPredictionComponent } from './weather-prediction/weather-predict
 import { HoverDirective } from './directives/hover.directive';
 import { SubstringPipe } from './pipes/substring.pipe';
 import { VirtualStorage } from './services/virtual-storage.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,8 @@ import { VirtualStorage } from './services/virtual-storage.service';
     WeatherPredictionComponent,
     HoverDirective,
     SubstringPipe,
-    
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,50 +1,12 @@
 <div class="wrapper rounded-3xl flex flex-col justify-around bg-slate-800 w-96">
-    <div class="flex flex-row justify-between items-center w-80 m-auto border-b border-gray-400 pb-3">
-        <span class="capitalize text-gray-400 w-11">today</span>
+    <div *ngFor="let i of arr"
+        class="flex flex-row justify-between items-center w-80 m-auto border-b border-gray-400 pb-3">
+        <span class="capitalize text-gray-400 w-11"> {{nextDays[i] | date: 'ccc'}} </span>
         <div class="w-28 flex flex-row justify-between items-center">
-            <img class="w-14" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-            <span class="capitalize text-gray-200">sunny</span>
+            <img class="w-14" [src]="'../../assets/icons/' + iconID[i] + '.png'" alt="Weather Icon">
+            <span class="capitalize text-sm text-gray-200">{{description[i]}}</span>
         </div>
-        <span class="text-gray-50">23<span class="text-gray-400">/16</span></span>
-    </div>
-    <div class="flex flex-row justify-between items-center w-80 m-auto border-b border-gray-400 pb-3">
-        <span class="capitalize text-gray-400 w-11">{{weekDays.monday}}</span>
-        <div class="w-28 flex flex-row justify-between items-center">
-            <img class="w-14" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-            <span class="capitalize text-gray-200">{{weatherTermEnum.s}}</span>
-        </div>
-        <span class="text-gray-50">25<span class="text-gray-400">/17</span></span>
-    </div>
-    <div class="flex flex-row justify-between items-center w-80 m-auto border-b border-gray-400 pb-3">
-        <span class="capitalize text-gray-400 w-11">{{weekDays.wednesday}}</span>
-        <div class="w-28 flex flex-row justify-between items-center">
-            <img class="w-14" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-            <span class="capitalize text-gray-200">{{weatherTermEnum.s}}</span>
-        </div>
-        <span class="text-gray-50">36<span class="text-gray-400">/22</span></span>
-    </div>
-    <div class="flex flex-row justify-between items-center w-80 m-auto border-b border-gray-400 pb-3">
-        <span class="capitalize text-gray-400 w-11">{{weekDays.thursday}}</span>
-        <div class="w-28 flex flex-row justify-between items-center">
-            <img class="w-14" src="../../assets/images/weather-overcast.png" alt="">
-            <span class="capitalize text-gray-200">{{weatherTermEnum.c}}</span>
-        </div>
-        <span class="text-gray-50">36<span class="text-gray-400">/22</span></span>
-    </div>
-    <div class="flex flex-row justify-between items-center w-80 m-auto border-b border-gray-400 pb-3">
-        <span class="capitalize text-gray-400 w-11">{{weekDays.friday}}</span>
-        <div class="w-28 flex flex-row justify-between items-center">
-            <img class="w-14" src="../../assets/images/weather-overcast.png" alt="">
-            <span class="capitalize text-gray-200">{{weatherTermEnum.c}}</span>
-        </div>
-        <span class="text-gray-50">36<span class="text-gray-400">/22</span></span>
-    </div>
-    <div class="flex flex-row justify-between items-center w-80 m-auto  pb-3">
-        <span class="capitalize text-gray-400 w-11">{{weekDays.saturday}}</span>
-        <div class="w-28 flex flex-row justify-between items-center">
-            <img class="w-14" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-            <span class="capitalize text-gray-200">{{weatherTermEnum.s}}</span>
-        </div>
-        <span class="text-gray-50">36<span class="text-gray-400">/22</span></span>
+        <span class="text-gray-50">{{maxTemperature[i]}}<span
+                class="text-gray-400">/{{minTemperature[i]}}℃</span></span>
     </div>
 </div>

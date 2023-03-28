@@ -1,33 +1,7 @@
 <div class="flex flex-row justify-around w-11/12 h-48 items-center bg-slate-800 rounded-3xl">
-    <div class="flex flex-col items-center">
-        <span class="text-gray-500">{{hours.six}}</span>
-        <img class="w-20" src="../../assets/images/weather-overcast.png" alt="">
-        <span class="text-gray-500">16℃</span>
+    <div *ngFor="let i of arr" class="flex flex-col items-center">
+        <span class="text-gray-500">{{time[i]}}</span>
+        <img class="w-20" [src]="'../../assets/icons/' + iconID[i] + '.png'" alt="Weather icon">
+        <span class="text-gray-500">{{temperature[i]}}℃</span>
     </div>
-    <div class="flex flex-col items-center">
-        <span class="text-gray-500">{{hours.nine}}</span>
-        <img class="w-20" src="../../assets/images/weather-overcast.png" alt="">
-        <span class="text-gray-500">16℃</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span class="text-gray-500">{{hours.twelve}}</span>
-        <img class="w-20" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-        <span class="text-gray-500">16℃</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span class="text-gray-500">{{hours.fifteen}}</span>
-        <img class="w-20" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-        <span class="text-gray-500">16℃</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span class="text-gray-500">{{hours.eighteen}}</span>
-        <img class="w-20" src="../../assets/images/512px-Weather_icon_-_sunny.svg.png" alt="">
-        <span class="text-gray-500">16℃</span>
-    </div>
-    <div class="flex flex-col items-center">
-        <span class="text-gray-500">{{hours.twentyone}}</span>
-        <img class="w-20" src="../../assets/images/weather-overcast.png" alt="">
-        <span class="text-gray-500">16℃</span>
-    </div>
-
 </div>
