@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HourlyWeatherService } from '../services/get-hourly-weather.service';
-import { ChooseCityService } from '../services/choose-city.service';
+import { ChooseCityService } from '../services/choose-city-state.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -23,10 +23,6 @@ export class HourlyWeatherComponent implements OnInit {
   ) {
     this.clickedCity$ = this.chooseCityService.clickedCity$;
   }
-
-
-
-  
 
   ngOnInit(): void {
     this.chooseCityService.clickedCity$.subscribe((city) => {

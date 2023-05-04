@@ -1,11 +1,12 @@
-<div>
-    <nav class="flex flex-col items-center justify-around rounded-3xl	w-20 pt-20 bg-slate-800">
-        <div class="flex flex-col items-center justify-between h-1/4">
-            <span class="cursor-pointer hover:text-gray-400 text-gray-500 capitalize">weather</span>
-            <span class="cursor-pointer hover:text-gray-400 text-gray-500 capitalize">cities</span>
-            <span class="cursor-pointer hover:text-gray-400 text-gray-500 capitalize">map</span>
-        </div>
-        <span routerLink="/login" class="cursor-pointer bg-slate-200 rounded-xl p-2 hover:bg-slate-500 hover:text-gray-300 text-gray-500 capitalize">Login</span>
-    </nav>
-    <router-outlet></router-outlet>
-</div>
+<nav
+    class=" flex flex-col items-center justify-around rounded-3xl pt-20 bg-slate-800 lg:flex-row lg:py-2 lg:mb-10 lg:bg-slate-600">
+    <div class="flex flex-col items-center justify-between h-1/6 lg:flex-row lg:w-1/3">
+        <span routerLink=""
+            class="cursor-pointer hover:text-gray-400 text-gray-500 capitalize lg:text-white">weather</span>
+        <span routerLink="/map"
+            class="cursor-pointer hover:text-gray-400 text-gray-500 capitalize lg:text-white">map</span>
+    </div>
+    <!-- <span routerLink="/login"
+        class="cursor-pointer bg-slate-200 rounded-xl p-2 hover:bg-slate-500 hover:text-gray-300 text-gray-500 capitalize lg:bg-slate-600 lg:p-0 lg:text-slate-900">Login</span> -->
+</nav>
+<router-outlet></router-outlet>

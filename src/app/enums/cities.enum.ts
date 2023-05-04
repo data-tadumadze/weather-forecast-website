@@ -62,5 +62,19 @@ export enum cities {
   bagdadi = 'Bagdadi',
   aspindza = 'Aspindza',
   ambrolauri = 'Ambrolauri',
-  find = "find"
+}
+
+export enum capitalCities {
+  sokhumi = 'Sokhumi',
+  zugdidi = 'Zugdidi',
+  ozurgeti = 'Ozurgeti',
+  batumi = 'Batumi',
+  ambrolauri = 'Ambrolauri',
+  kutaisi = 'Kutaisi',
+  gori = 'Gori',
+  mtskheta = 'Mtskheta',
+  tbilisi = 'Tbilisi',
+  telavi = 'Telavi',
+  rustavi = 'Gardabani',
+  akhaltsikhe = 'Vale',
 }

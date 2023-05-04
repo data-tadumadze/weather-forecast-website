@@ -11,9 +11,11 @@ export class WeatherPredictionService {
 
   getWeatherPrediction(city: string) {
     return this.http.get(
-      `${this.apiUrl}forecast/daily?city=${city}&key=d56fa0ebf6bd4e5d850586329f2003ec`
+      `${this.apiUrl}forecast/daily?city=${city}&key=95742094fdf14678b79d1a18abde8412`
     );
   }
 }
 
 // d56fa0ebf6bd4e5d850586329f2003ec
+
+// 95742094fdf14678b79d1a18abde8412

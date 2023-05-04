@@ -1,17 +1,13 @@
 import {
   Component,
-  EventEmitter,
-  Input,
   OnChanges,
   OnInit,
-  Output,
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { debounceTime } from 'rxjs';
-import { CurrentWeatherService } from '../services/get-current-weather.service';
 import { cities } from '../enums/cities.enum';
 import { Router } from '@angular/router';
-import { ChooseCityService } from '../services/choose-city.service';
+import { ChooseCityService } from '../services/choose-city-state.service';
 
 @Component({
   selector: 'app-header',
@@ -19,10 +15,6 @@ import { ChooseCityService } from '../services/choose-city.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit, OnChanges {
-  @Input() items: any[] = [];
-
-  @Output() filterChanged = new EventEmitter<any>();
-
   formGroup = new FormGroup({
     search: new FormControl(),
     location: new FormControl(null),
@@ -32,12 +24,11 @@ export class HeaderComponent implements OnInit, OnChanges {
   temperature: number = 0;
   city: string = '';
   iconID: number = 0;
-  public cities = Object.values(cities);
-  public filteredCities = this.cities;
-  public showCities = false;
+  cities = Object.values(cities);
+  filteredCities = this.cities;
+  showCities = false;
 
   constructor(
-    private currentWeatherService: CurrentWeatherService,
     private router: Router,
     private chooseCityService: ChooseCityService
   ) {
@@ -51,14 +42,6 @@ export class HeaderComponent implements OnInit, OnChanges {
   }
 
   onCitySelected(city: string) {
-    this.currentWeatherService.getCurrentWeather(city).subscribe({
-      next: (res) => {
-        this.myCurrentWeather = res;
-        this.temperature = this.myCurrentWeather.data[0].app_temp;
-        this.city = this.myCurrentWeather.data[0].city_name;
-        this.iconID = this.myCurrentWeather.data[0].weather.icon;
-      },
-    });
     this.chooseCityService.setClickedCity(city);
     this.formGroup.patchValue({ search: '' });
     this.router.navigateByUrl(`main/${city}`);
@@ -68,15 +51,16 @@ export class HeaderComponent implements OnInit, OnChanges {
   ngOnChanges(): void {}
 
   ngOnInit(): void {
-    this.chooseCityService.clickedCity$.subscribe((city) => {
-      this.currentWeatherService.getCurrentWeather(city).subscribe({
-        next: (res) => {
-          this.myCurrentWeather = res;
-          this.temperature = this.myCurrentWeather.data[0].app_temp;
-          this.city = this.myCurrentWeather.data[0].city_name;
-          this.iconID = this.myCurrentWeather.data[0].weather.icon;
-        },
-      });
+    this.chooseCityService.setClickedCity("Tbilisi");
+    this.chooseCityService.response$.subscribe((currentWeather) => {
+      if (!currentWeather) {
+        return;
+      }
+      
+      this.myCurrentWeather = currentWeather;
+      this.temperature = this.myCurrentWeather.data[0].app_temp;
+      this.city = this.myCurrentWeather.data[0].city_name;
+      this.iconID = this.myCurrentWeather.data[0].weather.icon;
     });
   }
 }

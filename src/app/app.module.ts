@@ -10,13 +10,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { WeatherPredictionComponent } from './weather-prediction/weather-prediction.component';
 import { HoverDirective } from './directives/hover.directive';
 import { SubstringPipe } from './pipes/substring.pipe';
-import { VirtualStorage } from './services/virtual-storage.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './log-in/log-in.component';
 import { MainComponent } from './main/main.component';
 import { PasswordRecoveryComponent } from './password-recovery/password-recovery.component';
 import { AuthGuard } from './auth/auth.guard';
+import { RouterModule } from '@angular/router';
+import { MapComponent } from './map/map.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { AuthGuard } from './auth/auth.guard';
     LogInComponent,
     MainComponent,
     PasswordRecoveryComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,9 @@ import { AuthGuard } from './auth/auth.guard';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    MatTooltipModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

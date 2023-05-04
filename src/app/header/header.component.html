@@ -1,5 +1,5 @@
-<div class="flex flex-col justify-around relative  w-11/12 items-center">
-    <form [formGroup]="formGroup" class="flex w-full h-12 items-center bg-slate-800 rounded-3xl">
+<div class="flex flex-col justify-around relative items-center mb-5">
+    <form [formGroup]="formGroup" class="flex w-full h-12 items-center bg-slate-800 rounded-3xl mb-5">
         <input class="w-full rounded-3xl  px-5 text-gray-200 h-12 bg-slate-800 m-auto" formControlName="search"
             autocomplete="off" type="text" placeholder="Search" (click)="showCities = true">
         <div id="cities-list" *ngIf="showCities"
@@ -14,9 +14,9 @@
         </div>
     </form>
 
-    <div class="flex flex-row justify-between w-11/12 items-center px-5">
-        <div class="flex flex-col justify-between h-32">
-            <span class="text-4xl text-gray-200 ">{{city}}</span>
+    <div class="flex flex-row justify-between w-1/2 items-center px-5">
+        <div class="flex flex-col justify-between">
+            <span class="text-4xl text-gray-200 mb-4">{{city}}</span>
             <span class=" text-gray-200 text-4xl">{{temperature}}℃</span>
         </div>
 

@@ -1,0 +1,14 @@
+<div class="flex justify-between items-center lg:flex-col">
+    <app-navbar></app-navbar>
+    <div class="relative">
+        <img src="../../assets/images/georgia-map-provinces-0.jpg" alt="">
+        <div (mouseenter)="showTooltip(city)" (mouseleave)="hideTooltip()" *ngFor="let city of capitalCities"
+            class="{{city}} w-40 h-20 lg:w-24 lg:h-10 cursor-default">
+            <div *ngIf="showingTooltip === city" class="bg-gray-800 rounded-lg">
+                <p class="text-white text-sm px-2 py-1 text-center capitalize">{{city}}</p>
+                <p class="text-white text-lg lg:text-xs px-2 py-1">{{ getMaxTemperature() }}</p>
+                <p class="text-white text-lg lg:text-xs px-2 py-1">{{ getMinTemperature() }}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { weekDays } from '../enums/weekdays.enum';
 import { weatherTermEnum } from '../enums/weather-term.enum';
 import { WeatherPredictionService } from '../services/get-weather-prediction.service';
-import { ChooseCityService } from '../services/choose-city.service';
+import { ChooseCityService } from '../services/choose-city-state.service';
 import { Observable } from 'rxjs';
 
 @Component({

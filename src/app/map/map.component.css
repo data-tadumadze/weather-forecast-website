@@ -1,0 +1,78 @@
+img {
+  width: 80vw;
+}
+
+.sokhumi {
+  position: absolute;
+  top: 20%;
+  left: 13%;
+
+}
+
+.zugdidi {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+}
+
+.ambrolauri {
+  position: absolute;
+  top: 40%;
+  left: 44%;
+}
+
+.ozurgeti {
+  position: absolute;
+  top: 63%;
+  left: 27%;
+}
+
+.batumi {
+  position: absolute;
+  top: 73%;
+  left: 21%;
+}
+
+.kutaisi {
+  position: absolute;
+  top: 49%;
+  left: 37%;
+}
+
+.akhaltsikhe {
+  position: absolute;
+  top: 74%;
+  left: 41%;
+}
+
+.gori {
+  position: absolute;
+  top: 61%;
+  left: 58%;
+}
+
+.mtskheta {
+  position: absolute;
+  top: 66%;
+  left: 67%;
+}
+
+.tbilisi {
+  position: absolute;
+  top: 72%;
+  left: 69%;
+}
+
+.rustavi {
+  position: absolute;
+  top: 78%;
+  left: 72%;
+}
+
+.telavi {
+  position: absolute;
+  top: 64%;
+  left: 79%;
+}
+
+

@@ -1,0 +1,18 @@
+.container2 {
+  width: 50vw;
+  height: 90vh;
+}
+
+.container3 {
+  width: 30vw;
+  height: 90vh;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container2, .container3 {
+    width: 90vw;
+  }
+  .container2 {
+    margin-bottom: 3%
+  }
+}
